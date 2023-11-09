@@ -1,0 +1,110 @@
+@import "../../../variables/variables.scss";
+
+.wrapper {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  .left-side {
+    width: 30%;
+    height: 100vh;
+    background-color: black;
+    @include flex-center;
+    flex-direction: column;
+
+    .form {
+      font-family: $karla;
+      @include flex-column;
+      background-color: $secondary-dark;
+      justify-content: space-between;
+      width: 80%;
+      gap: 4rem;
+    }
+  }
+
+  .title-register {
+    font-family: $karla;
+    color: $secondary-color;
+    margin-top: 2rem;
+  }
+
+  .name-pass-pass2 {
+    width: 100%;
+    @include flex-column;
+  }
+
+  .submit-register {
+    background-color: #4c68d7;
+    border-radius: 0.75rem;
+    width: 60%;
+    padding: 1rem;
+    margin: auto;
+    font-family: $karla;
+    color: white;
+    margin-bottom: 2rem;
+  }
+
+  .name-pass-pass2 {
+    @include flex-column;
+    gap: 1rem;
+  }
+  .right-side {
+    width: 70%;
+    height: 100vh;
+    background-color: #4C68D7;
+    @include flex-center;
+    .img-wrapper {
+      width: 90%;
+      height: 80%;
+      overflow: hidden;
+      @include flex-center;
+
+      .image {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+
+
+.form-register {
+  font-family: $karla;
+  @include flex-column;
+  width: 80%;
+  height: 70%;
+  justify-content: space-between;
+  @include border-lg;
+  align-items: center;
+  background-color: $secondary-dark;
+}
+
+.register-layout{
+  @include flex-column;
+    gap: 3rem;
+    width: 80%;
+    margin: auto;
+}
+
+.input_values_form {
+  margin-top: 2rem;
+  @include flex-column;
+  width: 100%;
+  gap: 2em;
+}
+
+@media (max-width: 768px) {
+  .left-side {
+    width: 100%;
+  }
+
+  .right-side {
+    display: none;
+  }
+}

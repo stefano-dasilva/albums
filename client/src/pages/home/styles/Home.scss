@@ -1,0 +1,227 @@
+@import "../../../variables/variables.scss";
+
+.home-wrapper {
+  font-family: $karla;
+  width: 90%;
+  margin: auto;
+  .global-albums {
+    @include flex-column;
+    .description-albums {
+      @include flex-row;
+      justify-content: flex-start;
+      align-items: center;
+      background-color: $secondary-dark;
+      gap: 1rem;
+      height: 40px;
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+.logout-bar{
+  @include flex-row;
+  align-items: center;
+  background-color: $secondary-dark;
+  height: 40px;
+  justify-content: flex-end;
+  margin-bottom: 1rem;
+}
+
+.album-title {
+  color: white;
+}
+
+.albums-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  .album-container {
+    width: 23.33%;
+    aspect-ratio: 1/1;
+    
+    @include flex-center;
+    .album {
+      @include flex-column;
+      background-color: $secondary-dark;
+      justify-content: space-between;
+      align-items: center;
+      width: 80%;
+      height: 80%;
+      .album-description {
+        @include flex-column;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 0.5rem;
+      }
+
+      .thumbnail-wrapper {
+        width: 80%;
+        height: 80%;
+        display: flex;
+        margin-top: 0.5rem;
+        cursor: pointer;
+        justify-content: center;
+
+        .thumbnail {
+          max-width: 100%;
+          max-height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  display: flex;
+  color: white;
+}
+
+.create-album-wrapper {
+  width: 23.33%;
+  aspect-ratio: 1/1;
+  @include flex-center;
+  .create-albumn-column {
+    @include flex-column;
+    @include flex-center;
+    align-items: center;
+    background-color: $secondary-dark;
+    cursor: pointer;
+    gap: 2rem;
+    width: 80%;
+    height: 80%;
+  }
+}
+
+.popupnewalbum {
+  position: fixed;
+  @include flex-column;
+  width: 40%;
+  height: 60%;
+  @include border-lg;
+  background-color: $secondary-dark;
+  top: 50%;
+  left: 50%;
+  border: 1px solid grey;
+  z-index: 2; /* Imposta uno z-index superiore per il secondo div */
+  pointer-events: auto;
+  transform: translate(-50%, -50%);
+}
+
+.close-window-section {
+  height: 8%;
+  @include flex-row;
+  align-items: center;
+  justify-content: flex-end;
+  border-bottom: 1px solid gray;
+}
+
+.titolo-wrapper {
+  height: 10%;
+  border-bottom: 1px solid gray;
+  display: flex;
+  align-items: center;
+}
+
+.add-image-desc-title {
+  @extend .popupnewalbum;
+  @include flex-row;
+
+  width: 70%;
+  height: 80%;
+}
+
+.new-label-wrapper {
+  height: 100%;
+  width: full;
+  @include flex-center;
+}
+
+.newthumbnailhome {
+  color: white;
+  cursor: pointer;
+  @include border-lg;
+  background-color: #4c68d7;
+  padding: 1rem;
+}
+
+.new-thumbnail-wrapper {
+  width: 60%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  border-right: 0.5px solid gray;
+  justify-content: center;
+
+  .thumbnail-detail {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+}
+
+.content-thumbnail-wrapper {
+  @include flex-column;
+  justify-content: space-between;
+  width: 40%;
+  
+}
+
+
+.new-thumbnail-title {
+    @include flex-row;
+    width: 100%;
+    height: 10%;
+    border-bottom: 0.5px solid gray;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+.inviaimmagine {
+  color: #4c68d7;
+  border-top: 0.5px solid gray;
+  height: 3rem;
+  @include flex-center;
+}
+
+.input-values-images {
+  @include flex-column;
+  width: 100%;
+  height: 60%;
+}
+
+.crea-album-button {
+  width: 40%;
+  padding: 1rem;
+  margin: auto;
+  cursor: pointer;
+  @include border-lg;
+  background-color: aquamarine;
+}
+
+.newimage-description {
+  background-color: rgb(38, 38, 38);
+  outline: none;
+  color: white;
+  font-family: $karla;
+  padding: 2px;
+}
+
+.hidden {
+  display: none;
+}
+
+.loaderstate {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+
+  @include flex-center;
+}

@@ -1,0 +1,31 @@
+$primary-color: #e3fcf7;
+$secondary-color: #425feb;
+$karla: "Karla", sans-serif;
+$poppins: "Poppins", sans-serif;
+$anti-flash: #d9ebfa;
+$wine: #427290;
+$dark-background : #121212;
+$secondary-dark :     rgb(38, 38, 38);
+
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin border {
+  border: 2px solid black;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
+}
+@mixin border-lg {
+  border-radius: 0.5rem;
+}

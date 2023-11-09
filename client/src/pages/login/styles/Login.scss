@@ -1,0 +1,110 @@
+@import "../../../variables/variables.scss";
+
+.wrapper {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  .left-side {
+    width: 30%;
+    height: 100vh;
+    background-color: black;
+    @include flex-center;
+   
+      .form-login {
+        font-family: $karla;
+        @include flex-column;
+        justify-content: space-between;
+        align-items: center;
+        width: 80%;
+        height: 70%;
+        margin: auto;
+        background-color: $secondary-dark;
+        gap: 4rem;
+        @include border-lg;
+        .button-wrapper {
+          @include flex-column;
+          justify-content: flex-start;
+           margin-top: 2rem;
+          .submit-login {
+            background-color: #4c68d7;
+            @include border-lg;
+            padding: 1rem;
+            width: 60%;
+            color:  white;
+            margin: auto;
+            margin-bottom: 1rem;
+            margin-top: 2rem;
+          }
+        }
+      }
+    
+  }
+
+   .title {
+        font-family: $karla;
+        color: $secondary-color;
+        margin-top: 2rem;
+      }
+
+  .form-content-layout{
+    @include flex-column;
+    gap: 3rem;
+    width: 80%;
+    margin: auto;
+  }
+  .right-side-login {
+    width: 70%;
+    height: 100vh;
+    background-color: #4C68D7;
+    @include flex-center;
+    .img-wrapper-login {
+      width: 90%;
+      height: 80%;
+      overflow: hidden;
+      @include flex-center;
+      .image-login {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+
+
+
+
+.error {
+  margin: 2%;
+}
+
+
+.name-pass {
+  width: 100%;
+  @include flex-column;
+}
+.password{
+  @include flex-row;
+  justify-content: space-between;
+   border: 2px solid rgb(56, 56, 56);
+   @include border-lg;
+  align-items: center;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .left-side {
+    width: 100%;
+  }
+
+  .right-side {
+    display: none;
+  }
+}
+

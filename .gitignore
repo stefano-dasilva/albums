@@ -1,0 +1,31 @@
+/server/node_modules
+/client/node_modules
+/server/.env
+
+.sass-cache/
+
+# Environment file
+.env
+
+# Compiled files
+*.log
+
+# IDE files
+.vscode/
+.idea/
+
+# Mac OS
+.DS_Store
+
+# Editor specific files
+*.sublime-workspace
+*.sublime-project
+*.vscode/
+*.idea/
+
+# Yarn
+yarn-error.log
+yarn.lock
+
+# npm
+npm-debug.log

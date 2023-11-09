@@ -1,0 +1,239 @@
+@import "../../../variables/variables.scss";
+
+.album-detail-wrapper {
+  @include flex-column;
+  .album-detail-nav {
+    height: 40px;
+    width: 100%;
+    background-color: $secondary-dark;
+    @include flex-row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2rem;
+  }
+  .album-detail-title {
+    width: 100%;
+  }
+  .album-detail-wrapper {
+    @include flex-row;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+}
+
+.image-wrapper {
+  width: 23.33%;
+  aspect-ratio: 1/1;
+  @include flex-center;
+  .image-content {
+    overflow: hidden;
+    background-color: $secondary-dark;
+    width: 95%;
+    height: 95%;
+    cursor: pointer;
+      .img-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    
+  }
+}
+
+.add-image-wrapper {
+  @include flex-center;
+  width: 23.33%;
+  height: 20rem;
+  .add-image-column {
+    @include flex-column;
+    @include flex-center;
+    background-color: $secondary-dark;
+    gap: 2rem;
+    width: 95%;
+    height: 95%;
+    cursor: pointer;
+    @include border-lg;
+  }
+}
+
+.popupform {
+  position: absolute;
+  width: 70%;
+  height: 80%;
+  background-color: $secondary-dark;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  @include flex-row;
+  @include border-lg;
+  border: 1px solid black;
+
+  .selected-image-wrapper {
+    width: 60%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    border-right:  1px solid rgb(56, 56, 56);
+    justify-content: center;
+    
+    .selected-image {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+  }
+}
+
+.add-new-image-desc-tit{
+  @include flex-column;
+
+}
+.didascalia {
+    height: 70%;
+    background-color: inherit;
+    outline: none;
+    color: white;
+    font-family: $karla;
+  }
+
+.compilazione {
+  @include flex-column;
+  width: 40%;
+  justify-content: space-between;
+  height: 100%;
+  
+}
+
+
+
+.hidden {
+  display: none;
+}
+input::placeholder,
+textarea::placeholder {
+  font-family: $karla;
+}
+
+textarea {
+  border: none;
+  resize: none;
+}
+
+.image-detail-wrapper {
+  position: absolute;
+  width: 70%;
+  height: 80%;
+  background-color: $secondary-dark;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  @include flex-row;
+  @include border-lg;
+  border: 1px solid black;
+
+  .img-detail-wrapper {
+    width: 60%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    border-right: 1px solid rgb(56, 56, 56);
+    .img-detail-img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+  }
+}
+
+.close-window-imagedesc{
+  height: 7%;
+  @include flex-row;
+  justify-content: flex-end;
+  border-bottom: 1px solid rgb(56, 56, 56);
+  align-items: center;
+}
+
+.title-new-im {
+  width: 50%;
+  margin: auto;
+  text-align: center;
+
+}
+
+
+
+.content-section-wrap {
+  @include flex-column;
+  position: relative;
+  width: 40%;
+  height: 100%;
+  .image-detail-title-wrapper {
+    height: 8%;
+    width: 100%;
+    border-bottom: 1px solid rgb(56, 56, 56);
+    @include flex-row;
+    align-items: center;
+  }
+}
+.content-scrolling {
+  overflow: scroll; /* Abilita lo scorrimento */
+}
+
+.content-scrolling::-webkit-scrollbar {
+  width: 0; /* Nascondi la barra di scorrimento */
+}
+
+.image-description-wrapper {
+  border-bottom: 0.5px solid rgb(56, 56, 56);
+
+  .description-content {
+    margin-left: 2%;
+  }
+}
+
+.add-comment-wrapper {
+  width: 100%;
+  height: 10%;
+  background-color: $secondary-dark;
+  position: absolute;
+  bottom: 0;
+  z-index: 20;
+  border-top: 0.5px solid rgb(56, 56, 56);
+  justify-content: space-between;
+  @include flex-row;
+}
+
+.pubblica {
+  margin-right: 4%;
+  color: #4c68d7;
+}
+
+.comment-wrapper {
+  @include flex-column;
+  border-bottom: 1px solid rgb(56, 56, 56);
+  .comment-para {
+    margin-left: 2%;
+  }
+  .comment-date {
+    margin-left: 2%;
+  }
+}
+
+p {
+  color: white;
+  font-size: small;
+}
+
+@media (max-width: 768px) {
+  .image-wrapper {
+    width: 33.33%;
+
+    aspect-ratio: 1/1;
+  }
+
+  .add-image-wrapper {
+    width: 33.33%;
+    aspect-ratio: 1/1;
+  }
+}

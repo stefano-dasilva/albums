@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+  background-color: black;
+}
+
+.App {
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+
+input {
+  border: none;
+  outline: none;
+  background-color: inherit;
+    padding: 0.4rem;
+  font-family: $karla;
+}
+
+
+
+button,
+input[type="submit"],
+input[type="reset"] {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+input {
+  box-sizing: border-box;
+}

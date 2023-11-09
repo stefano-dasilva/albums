@@ -1,0 +1,110 @@
+.wrapper {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+}
+.wrapper .left-side {
+  width: 30%;
+  height: 100vh;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper .left-side .form-login {
+  font-family: "Karla", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  height: 70%;
+  margin: auto;
+  background-color: rgb(38, 38, 38);
+  gap: 4rem;
+  border-radius: 0.5rem;
+}
+.wrapper .left-side .form-login .button-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-top: 2rem;
+}
+.wrapper .left-side .form-login .button-wrapper .submit-login {
+  background-color: #4c68d7;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  width: 60%;
+  color: white;
+  margin: auto;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+}
+.wrapper .title {
+  font-family: "Karla", sans-serif;
+  color: #425feb;
+  margin-top: 2rem;
+}
+.wrapper .form-content-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  width: 80%;
+  margin: auto;
+}
+.wrapper .right-side-login {
+  width: 70%;
+  height: 100vh;
+  background-color: #4C68D7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper .right-side-login .img-wrapper-login {
+  width: 90%;
+  height: 80%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper .right-side-login .img-wrapper-login .image-login {
+  max-width: 100%;
+  max-height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.hidden {
+  display: none;
+}
+
+.error {
+  margin: 2%;
+}
+
+.name-pass {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.password {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border: 2px solid rgb(56, 56, 56);
+  border-radius: 0.5rem;
+  align-items: center;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .left-side {
+    width: 100%;
+  }
+  .right-side {
+    display: none;
+  }
+}/*# sourceMappingURL=Login.css.map */
