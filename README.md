@@ -4,7 +4,7 @@ Questo progetto è un'applicazione web che consente la creazione e la condivisio
 ## Registrazione e Login
 Gli utenti possono registrarsi e accedere al sistema attraverso una pagina pubblica con form di registrazione e login. La registrazione verifica la validità sintattica dell'indirizzo email e l'uguaglianza tra i campi "password" e "ripeti password". I controlli di validità sono effettuati anche lato client tramite regex. Per l'autenticazione ho utilizzato JWT unito al session storage e cookies.<br>
 
-<img src="client/src/assets/login.ng" alt="Login" width="800px" height="500px">
+![Home](/client/src/assets/login.png)
 
 ## Accesso all'homePage
 In seguito all'accesso l'utente si ritroverà nella home page. Questa pagina è divisa in due sezioni, la prima mostra gli album creati dagli altri utenti. Di ogni album viene mostrata la copertina, il titolo dell'album e il nome del creatore. La seconda sezione comprende gli album creati dall'utente che ha effettuato il login, anch'essi mostrano gli stessi dati<br>
@@ -23,7 +23,7 @@ In seguito all'accesso l'utente si ritroverà nella home page. Questa pagina è 
  Interagendo con la sezione dei propri album è possibile crearne uno nuovo, dopo aver inserito titolo e immagine di copertina, l'album appena creato verrà visualizzato fin da subito nella sezione dei propri album<br>
 
  ![Thumbnail](/client/src/assets/compo.png)
- ![Thumbnail2](/client/src/assets/compo2.png)
+ ![Thumbnail2](/client/src/assets/comp2.png)
 
 ## Logout
 L'applicazione consente il logout dell'utente.<br>
